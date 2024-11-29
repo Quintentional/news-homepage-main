@@ -13,6 +13,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+}
+
+#overlay{
+    display: none;
 }
 
 #layout {
@@ -41,7 +46,11 @@ svg {
     margin-top: 5rem;
 }
 
-ul {
+#mobile-menu {
+    display: none;
+}
+
+#nav {
     display: flex;
     margin-top: 5rem;
 }
@@ -68,6 +77,17 @@ a {
 #main-img {
     width: 46rem;
     margin-bottom: 2rem;
+}
+#hamburger {
+    display: none;
+}
+
+#hamburger-close {
+    display: none;
+}
+
+#main-img-mobile {
+    display: none;
 }
 
 #main-article {
@@ -191,4 +211,252 @@ button:hover {
 .trending-p {
     width: 14rem;
     line-height: 1.5rem;
+}
+
+
+/* ------------------------------------------Mobile------------------------------------------- */
+
+@media(max-width: 375px) {
+
+    body {
+        width: 375px;
+        min-height: 100vh;
+    }
+
+    #overlay{
+        width:100%;
+        height: 100%;
+        background-color: hsla(244, 21%, 26%, 0.507);
+        z-index: 1;
+        position: absolute;
+        top: 0;
+        display: none;
+    }
+    
+    #layout {
+        width: 90%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #header {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 1.5rem;
+    }
+    
+    #content {
+        display: grid;
+        column-gap: 0;
+        row-gap: 4rem;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: 
+        'main'
+        'new'
+        'trending';
+        justify-content: center;
+    }
+    
+    svg {
+        margin-top: 1.5rem;
+        transform: scale(.7);
+        position: relative;
+        left: -15px
+    }
+
+    #mobile-menu {
+        width: 16rem;
+        height: 100vh;
+        background-color: hsl(36, 100%, 99%);
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        right: 0;
+        z-index: 2;
+        display: none;
+    }
+
+    #hamburger {
+        width: 2.5rem;
+        height: 1.25rem;
+        margin-top: 1.85rem;
+        display: inline-block;
+        display: none;
+    }
+
+    #hamburger-close {
+        width: 2rem;
+        height: 2rem;
+        margin-top: 1.85rem;
+        display: inline-block;
+        align-self: flex-end;
+        margin-top: 2rem;
+        margin-right: 1rem;
+    }
+    
+    #nav {
+        display: none;
+        margin-top: 5rem;
+    }
+
+    #mobile-nav {
+        margin-top: 5rem
+    }
+    
+    li {
+        list-style: none;
+        font-size: 18px;
+        font-weight: 600;
+        margin-left: 1.5rem;
+        margin-bottom: 2rem
+    }
+    
+    li a:hover {
+     color: hsl(5, 85%, 63%);
+    }
+    
+    a {
+        text-decoration: none;
+        color: hsl(240, 100%, 5%);
+    }
+
+    
+    #main-img {
+        display: none;
+    }
+
+    #main-img-mobile {
+        display: block;
+        height: 19rem;
+    }
+    
+    #main-article {
+        flex-direction: column;
+    }
+    
+    h1 {
+        width: 20rem;
+        font-size: 40px;
+        font-weight: 800;
+        line-height: 2.5rem;
+        margin: 1.5rem 0 .75rem 0;
+    }
+    
+    #main-p {
+        width: 21rem;
+        color: hsl(240, 100%, 5%);
+        line-height: 1.6rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    button {
+        width: 12rem;
+        height: 3rem;
+        background-color: hsl(5, 85%, 63%);
+        border: none;
+        color: hsl(240, 100%, 5%);
+        font-size: 14px;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 2.5px;
+    }
+    
+    button:hover {
+        cursor: pointer;
+        background-color: hsl(240, 100%, 5%);
+        color: hsl(36, 100%, 99%)
+    }
+    
+    #new {
+        width: 22rem;
+        height: 31rem;
+        background-color: hsl(240, 100%, 5%);
+        grid-area: new;
+    }
+    
+    .new-div {
+        position: relative;
+    }
+    
+    .new-div::after {
+        content: '';
+        width: 85%;
+        border-bottom: 1px solid hsla(36, 100%, 99%, 0.418);
+        position: absolute;
+        bottom: 0;
+        left: 1.5rem;
+        padding-top: 1rem;
+    }
+    
+    #new-h2 {
+        color: hsl(35, 77%, 62%);
+        font-size: 32px;
+        margin: 1.5rem 0 1.8rem 1.5rem;
+    }
+    
+    .new-h3 {
+        font-size: 20px;
+        color:hsl(36, 100%, 99%);
+        margin: 0 0 .5rem 1.5rem;
+    }
+    
+    .new-h3:hover {
+        color: hsl(35, 77%, 62%);
+    }
+    
+    .new-p {
+        width: 19rem;
+        color: hsl(233, 8%, 79%);
+        margin: 0 0 2rem 1.5rem;
+        padding-bottom: 1.8rem;
+        line-height: 1.65rem;
+    }
+    
+    #trending {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 2.5rem;
+        grid-area: trending;
+    }
+    
+    .trending-flex {
+        display: flex;
+        margin-bottom: 2rem;
+    }
+    
+    #trending img {
+        width: 6rem;
+        margin-right: 1.5rem;
+        margin-left: 0;
+    }
+    
+    #trending-retro img {
+        margin-left: 0;
+    }
+    
+    .trending-h2 {
+        color:hsl(5, 85%, 63%);
+        font-size: 32px;
+        font-weight: 800;
+        margin-bottom: .75rem;
+    }
+    
+    .trending-h3 {
+        font-weight: 800;
+        margin-bottom: .75rem;
+    }
+    
+    .trending-h3:hover {
+        color: hsl(5, 85%, 63%);
+    }
+    
+    .trending-p {
+        width: 14rem;
+        line-height: 1.5rem;
+    }
+
+
+
 }
