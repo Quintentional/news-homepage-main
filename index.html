@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
   <title>Frontend Mentor | News homepage</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -26,34 +29,38 @@
 
   <section id="content">
 
-    <img src="./assets/images/image-web-3-desktop.jpg" alt="">
+<div id="main">
+  <img id= "main-img" src="./assets/images/image-web-3-desktop.jpg" alt="">
 
-    <div id="main-article">
-      <h1>The Bright Future of Web 3.0?</h1>
+  <div id="main-article">
+    <h1>The Bright Future of Web 3.0?</h1>
+    <div id="main-left">
       <p id="main-p">
         We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. 
         But is it really fulfilling its promise?
-        <button id="read-more">Read more</button>
       </p>
+      <button id="read-more">Read more</button>
+    </div>
+</div>
     </div>
 
     <div id="new">
 
-      <h2>New </h2>
+      <h2 id="new-h2">New </h2>
 
-      <div id="cars">
-        <h3 id="cars-h3">Hydrogen VS Electric Cars</h3>
-      <p id="cars-p">Will hydrogen-fueled cars ever catch up to EVs?</p>
+      <div id="cars" class="new-div">
+        <a href="#"><h3 id="cars-h3" class="new-h3">Hydrogen VS Electric Cars</h3></a>
+      <p id="cars-p" class="new-p">Will hydrogen-fueled cars ever catch up to EVs?</p>
       </div>
     
-      <div id="art">
-        <h3 id="art-h3">The Downsides of AI Artistry</h3>
-      <p id="art-p">What are the possible adverse effects of on-demand AI image generation?</p>
+      <div id="art" class="new-div">
+        <a href="#"><h3 id="art-h3" class="new-h3">The Downsides of AI Artistry</h3></a>
+      <p id="art-p" class="new-p">What are the possible adverse effects of on-demand AI image generation?</p>
       </div>
 
-      <div id="funding">
-        <h3 id="funding-h3">Is VC Funding Drying Up?</h3>
-      <p id="funding-p">Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
+      <div id="funding" class="new-div">
+        <a href="#"><h3 id="funding-h3" class="new-h3">Is VC Funding Drying Up?</h3></a>
+      <p id="funding-p" class="new-p">Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
       </div>
       
   
@@ -61,29 +68,29 @@
 
     <div id="trending">
 
-      <div id="trending-retro">
+      <div id="trending-retro" class="trending-flex">
         <img src="./assets/images/image-retro-pcs.jpg" alt="retro pcs">
       <div id="retro-content">
-        <h2 id="retro-h2" class="trending=h2">01</h2>
-      <h3 id="retro-h3" class="trending=h3">Reviving Retro PCs</h3>
+        <h2 id="retro-h2" class="trending-h2">01</h2>
+      <a href="#"><h3 id="retro-h3" class="trending-h3">Reviving Retro PCs</h3></a>
       <p id="retro-p" class="trending-p">What happens when old PCs are given modern upgrades?</p>
       </div>
       </div>
     
-      <div id="trending-laptops">
+      <div id="trending-laptops" class="trending-flex">
         <img src="./assets/images/image-top-laptops.jpg" alt="laptop keyboard">
        <div id="laptops-content">
-        <h2 id="laptops-h2" class="trending=h2">02</h2>
-        <h3 id="laptops-h3" class="trending=h3">Top 10 Laptops of 2022</h3>
+        <h2 id="laptops-h2" class="trending-h2">02</h2>
+        <a href="#"><h3 id="laptops-h3" class="trending-h3">Top 10 Laptops of 2022</h3></a>
         <p id="laptops-p" class="trending-p">Our best picks for various needs and budgets.</p>
        </div>
       </div>
     
-      <div id="trending-gaming">
+      <div id="trending-gaming" class="trending-flex">
         <img src="./assets/images/image-gaming-growth.jpg" alt="Playstation controller">
         <div id="gaming-content">
-          <h2 id="gaming-h2" class="trending=h2">03</h2>
-      <h3 id="gaming-h3" class="trending=h3">The Growth of Gaming</h3>
+          <h2 id="gaming-h2" class="trending-h2">03</h2>
+      <a href="#"><h3 id="gaming-h3" class="trending-h3">The Growth of Gaming</h3></a>
       <p id="gaming-p" class="trending-p">How the pandemic has sparked fresh opportunities.</p>
         </div>
       </div>
